@@ -14,3 +14,10 @@ if v*f(x)>0, b=x; else a=x; end;
 x=(a+b)/2;
 end
 if nargout==2, y=f(x); end;
+
+%%%%% Q1 (a)
+[x,y]=Bisection(@(x) x^x-50,3,4,0)
+%%%%% Q1 (b)
+[x,y]=Bisection(@(x) log(x)-cos(x),1,pi,0)
+%%%%% Q1 (c)
+[x,y]=bisection(@(x) x+exp(x),-1,0,0)
