@@ -50,4 +50,13 @@ while abs(upbd)>eps
 end
 a=a(:);
 f=f(:);y=[a f];
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%Q3.2
+x=1; n=0;   difference=1;    % x=initial input value; n=number of iterations
+F=[0 0];
+while abs(difference)>eps
+    xold=x;
+    x=(x+1)^(1/3);  % iteration function
+    difference=xold-x;  n=n+1;
+    F(n,1)=n;   % number of iterations
+    F(n,2)=x;   % function value
+end
